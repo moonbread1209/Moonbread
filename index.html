@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>카톡 공유</title>
+<script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+    <input type="button" onClick="sendLinkCustom();" value="Custom"/>
+    <input type="button" onClick="sendLinkDefault();" value="Default"/>
+
+<script type="text/javascript">
+    function sendLinkCustom() {
+        Kakao.init("7715ffe8ca7ebb9243839fc2ef343993");
+        Kakao.Link.sendCustom({
+            templateId: 74323
+        });
+    }
+</script>
+
+<script>
+try {
+  function sendLinkDefault() {
+    Kakao.init('7715ffe8ca7ebb9243839fc2ef343993')
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '✉️ 길드 초대장이 도착했어요',
+        description: 'ㄱ 길드로 오세요~',
+        imageUrl:
+          'https://postfiles.pstatic.net/MjAyNDA0MjZfMjcx/MDAxNzE0MTAzNDQ0MTUy.tNZvicHoTaJ3NfWo4xJWevG-qjKc83ou6HjEj86HRJwg.1ttwI-EIqESg8JYV7K4J9umaEPO2fNQD3Tq6hqwz4HEg.PNG/export202404260947517841.png?type=w966',
+        link: {
+          mobileWebUrl: 'https://developers.kakao.com',
+          webUrl: 'https://developers.kakao.com',
+        },
+      },
+      buttons: [
+        {
+          title: '초대장 확인',
+          link: {
+            mobileWebUrl: 'https://postfiles.pstatic.net/MjAyNDA0MjZfMjY1/MDAxNzE0MTAzOTcyMjk4.BSpYQ238NZJ0yVFTjuDNOhNkcleNMYAiL_RpTbTCSKYg.GqOpqHRFt6nk7MP6E6QekOFJB-fztRilNE_g9IdjAoQg.PNG/%EC%A0%9C%EB%AA%A9%EC%9D%84_%EC%9E%85%EB%A0%A5%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94_-001-8.png?type=w966',
+            webUrl: 'https://postfiles.pstatic.net/MjAyNDA0MjZfMjY1/MDAxNzE0MTAzOTcyMjk4.BSpYQ238NZJ0yVFTjuDNOhNkcleNMYAiL_RpTbTCSKYg.GqOpqHRFt6nk7MP6E6QekOFJB-fztRilNE_g9IdjAoQg.PNG/%EC%A0%9C%EB%AA%A9%EC%9D%84_%EC%9E%85%EB%A0%A5%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94_-001-8.png?type=w966',
+          },
+        },
+        {
+          title: '길드가입,
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com',
+          },
+        },
+      ],
+    })
+  }
+; window.kakaoDemoCallback && window.kakaoDemoCallback() }
+catch(e) { window.kakaoDemoException && window.kakaoDemoException(e) }
+</script>
+   
+</body>
+</html>
